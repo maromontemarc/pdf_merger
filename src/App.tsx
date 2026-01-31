@@ -1,5 +1,4 @@
 import React, { useState, useCallback } from 'react';
-import { Link } from 'react-router-dom';
 import { PDFDocument } from 'pdf-lib';
 import { Upload, FileText, X, GripVertical, Download, File as FileIcon, Loader2, Shield, Zap, Lock, HelpCircle, ChevronDown, ChevronUp } from 'lucide-react';
 import { motion, Reorder, AnimatePresence } from 'framer-motion';
@@ -193,7 +192,7 @@ export default function App() {
     return (
         <div className="min-h-screen">
             {/* Hero Section with Tool */}
-            <section className="p-8 flex flex-col items-center justify-center min-h-screen">
+            <section className="p-8 flex flex-col items-center justify-center min-h-[calc(100vh-64px)]">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -507,39 +506,7 @@ export default function App() {
                 </div>
             </section>
 
-            {/* Footer */}
-            <footer className="py-12 px-8 border-t border-gray-800">
-                <div className="max-w-4xl mx-auto">
-                    <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-                        <div className="text-center md:text-left">
-                            <h3 className="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-indigo-400 to-purple-400 mb-2">
-                                PDF Merger
-                            </h3>
-                            <p className="text-gray-500 text-sm">
-                                Secure, fast, and free PDF combining tool
-                            </p>
-                        </div>
 
-                        <div className="flex items-center gap-6 text-sm">
-                            <Link to="/privacy" className="text-gray-400 hover:text-gray-200 transition-colors">
-                                Privacy Policy
-                            </Link>
-                            <Link to="/terms" className="text-gray-400 hover:text-gray-200 transition-colors">
-                                Terms of Service
-                            </Link>
-                        </div>
-                    </div>
-
-                    <div className="mt-8 pt-8 border-t border-gray-800 text-center">
-                        <p className="text-gray-500 text-sm">
-                            © {new Date().getFullYear()} PDF Merger. All rights reserved.
-                        </p>
-                        <p className="text-gray-600 text-xs mt-2">
-                            Your files are processed 100% locally and never uploaded to any server.
-                        </p>
-                    </div>
-                </div>
-            </footer>
         </div>
     );
 }

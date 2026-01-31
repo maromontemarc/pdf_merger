@@ -1,22 +1,15 @@
-import { Link } from 'react-router-dom';
-import { ArrowLeft, Shield } from 'lucide-react';
+import { Shield } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export default function PrivacyPolicy() {
     return (
-        <div className="min-h-screen p-8">
+        <div className="p-8">
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 className="max-w-3xl mx-auto"
             >
-                <Link
-                    to="/"
-                    className="inline-flex items-center gap-2 text-gray-400 hover:text-gray-200 transition-colors mb-8"
-                >
-                    <ArrowLeft size={20} />
-                    Back to PDF Merger
-                </Link>
+
 
                 <div className="glass-card p-8">
                     <div className="flex items-center gap-4 mb-8">
